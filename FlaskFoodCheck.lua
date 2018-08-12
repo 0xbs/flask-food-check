@@ -102,8 +102,11 @@ local FFC_EATING_TABLE = {
 	[430] = 1, -- drink
 	[160598] = 1, -- food
 	[160599] = 1, -- drink
+	[170906] = 1, -- food & drink
 	[192002] = 1, -- food & drink
 	[225743] = 1, -- food & drink
+	[251232] = 1, -- food & drink
+	[272819] = 1, -- food & drink
 }
 
 
