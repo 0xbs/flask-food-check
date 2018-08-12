@@ -160,10 +160,20 @@ function FFC:PlayerName(name)
 end
 
 
+function FFC:UnitBuff(player, spellId)
+    for i = 1, 40 do
+        local name, _, _, _, _, expires, _, _, _, id, _, _, _, _, value1, value2, value3 = UnitBuff(player, i, nil)
+        if id == spellId then
+            return name, expires, value1, value2, value3
+        end
+    end
+    return nil
+end
+
+
 function FFC:GetPlayerBuffValueAndRemaining(player, spellTable, fallbackSpellId)
     for spellid, amount in pairs(spellTable) do
-        local name, _, _, _, _, _, expires, _, _, _, _, _, _,
-            value1, value2, value3 = UnitBuff(player, GetSpellInfo(spellid))
+        local name, expires, value1, value2, value3 = FFC:UnitBuff(player, spellid)
         if name then
             if value2 and value2 > 0 then amount = value2 end
             local remaining = 0
@@ -174,8 +184,7 @@ function FFC:GetPlayerBuffValueAndRemaining(player, spellTable, fallbackSpellId)
     if fallbackSpellId then
         -- fallback: try to find a buff called "Well Fed"/"Food"/etc in the
         -- current locale and read its special value2
-        local name, _, _, _, _, _, expires, _, _, _, _, _, _,
-            value1, value2, value3 = UnitBuff(player, GetSpellInfo(fallbackSpellId))
+        local name, expires, value1, value2, value3 = FFC:UnitBuff(player, fallbackSpellId)
         if name then
             local remaining = 0
             if expires > 0 then remaining = math.ceil(expires - GetTime()) end
