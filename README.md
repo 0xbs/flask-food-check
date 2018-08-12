@@ -8,7 +8,7 @@ FlaskFoodCheck will only write to a channel on ready check in two cases:
 (2) you are in a challenge mode dungeon. 
 Of course, FlaskFoodCheck behaviour can be freely customized using slash commands.
 
-Available commands:
+### Available commands
 
 * `/ffc run` - Manually trigger a flask and food buff check. Will be always printed to a raid channel (unless you are muted).
 * `/ffc mute` - Mute the addon (never write to raid channel, but display locally). Useful if your angry flask-missing raid lead hates this addon.
