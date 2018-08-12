@@ -2,7 +2,7 @@
 -- FlaskFoodCheck
 -- Checks if all raid members have flask, food and rune buff.
 -------------------------------------------------------------------------------
--- Copyright (C) 2015 Elotheon-Arthas-EU
+-- Copyright (C) 2018 Elotheon-Arthas-EU
 -- 
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -249,9 +249,9 @@ function FFC:IsInSameZone(zone)
 	local zonereal = GetRealZoneText()
 	local zonetext = GetZoneText()
 	local zoneinst = GetInstanceInfo()
-	local zonemap = GetMapNameByID(GetCurrentMapAreaID())
-	if zone and ((zonereal and zonereal == zone) or (zonetext and zonetext == zone) or 
-		(zoneinst and zoneinst == zone) or (zonemap and zonemap == zone)) then
+	if zone and ((zonereal and zonereal == zone) or
+                 (zonetext and zonetext == zone) or
+                 (zoneinst and zoneinst == zone)) then
 		return true
 	end
 	return false
