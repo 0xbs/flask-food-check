@@ -32,103 +32,69 @@ local FFC_EATING_SPELL_REF = 433
 
 
 local FFC_FOOD_TABLE = {
-	-- WARLORDS OF DRAENOR
-	[177931] = 75, -- 75 versatility (Pre-Mixed Pot of Noodles)
-
-	-- herb garden tree fruits
-	[174062] = 75, -- 75 critical strike (Perfect Nagrand Cherry)
-	[174079] = 75, -- 75 haste (Perfect O'ruk Orange)
-	[174077] = 75, -- 75 mastery (Perfect Fuzzy Pear)
-	[174080] = 75, -- 75 multistrike (Perfect Greenskin Apple)
-	[174078] = 75, -- 75 versatility (Perfect Ironpeel Plantain)
-
-	-- cooking 75-stat and herb garden tree fruits
-	[160600] = 75, -- 112 stamina (Hearty Elekk Steak, Steamed Scorpion)
-	[160724] = 75, -- 75 critical strike (Blackrock Ham, Grilled Gulper, Nagrand Cherry)
-	[160726] = 75, -- 75 haste (Pan-Seared Talbuk, Sturgeon Stew, O'ruk Orange)
-	[160793] = 75, -- 75 mastery (Braised Riverbeast, Fat Sleeper Cakes, Fuzzy Pear)
-	[160832] = 75, -- 75 multistrike (Rylak Crepes, Fiery Calamari, Greenskin Apple)
-	[160839] = 75, -- 75 versatility (Clefthoof Sausages, Skulker Chowder, Ironpeel Plantain)
-
-	-- cooking 100-stat
-	[160883] = 100, -- 100 stamina
-	[160889] = 100, -- 100 critical strike
-	[160893] = 100, -- 100 haste
-	[160897] = 100, -- 100 mastery
-	[160900] = 100, -- 100 multistrike
-	[160902] = 100, -- 100 versatility
-
-	-- unknown
-	[175218] = 100, -- 100 critical strike
-	[175219] = 100, -- 100 haste
-	[175220] = 100, -- 100 mastery
-	[175222] = 100, -- 100 multistrike
-	[175223] = 100, -- 100 versatility
-
-	-- cooking 125-stat, feast 75-stat, feast 100-stat (check value2)
-	[180747] = 125, -- 187 stamina
-	[180745] = 125, -- 125 critical strike
-	[180748] = 125, -- 125 haste
-	[180750] = 125, -- 125 mastery
-	[180749] = 125, -- 125 multistrike
-	[180746] = 125, -- 125 versatility
-
-	[188534] = 125, -- felmouth frenzy
-
 	-- LEGION
-	[201223] = 225, -- 225 critical strike
-	[201330] = 225, -- 225 haste
-	[201332] = 225, -- 225 mastery
-	[201334] = 225, -- 225 versatility
-	[201336] = 225, -- fire volley proc (10194 damage)
+	[201223] = 12, -- critical strike
+	[201330] = 12, -- haste
+	[201332] = 12, -- mastery
+	[201334] = 12, -- versatility
+	[201336] = 12, -- fire volley proc
 
-	[201350] = 1,   -- gain sprint after killing an enemy
-	[201695] = 1,   -- increased out-of-combat health regeneration
+	[225597] = 16, -- critical strike
+	[225598] = 16, -- haste
+	[225599] = 16, -- mastery
+	[225600] = 16, -- versatility
+	[225601] = 16, -- fire volley proc
 
-	[225597] = 300, -- 300 critical strike
-	[225598] = 300, -- 300 haste
-	[225599] = 300, -- 300 mastery
-	[225600] = 300, -- 300 versatility
-	[225601] = 300, -- fire volley proc (13592 damage)
+	[225602] = 19, -- critical strike
+	[225603] = 19, -- haste
+	[225604] = 19, -- mastery
+	[225605] = 19, -- versatility
+	[225606] = 19, -- fire volley proc
 
-	[225602] = 375, -- 375 critical strike
-	[225603] = 375, -- 375 haste
-	[225604] = 375, -- 375 mastery
-	[225605] = 375, -- 375 versatility
-	[225606] = 375, -- fire volley proc (16990 damage)
+    -- BATTLE FOR AZEROTH
+    [257408] = 53,  -- critical strike
+    [257413] = 53,  -- haste
+    [257418] = 53,  -- mastery
+    [257422] = 53,  -- versatility
+
+    [257410] = 70,  -- critical strike
+    [257415] = 70,  -- haste
+    [257420] = 70,  -- mastery
+    [257424] = 70,  -- versatility
+
+    [259448] = 75,  -- agility
+    [259449] = 75,  -- intellect
+    [259452] = 75,  -- strength
+    [259453] = 75,  -- 113 stamina
+
+    [259454] = 100, -- agility
+    [259455] = 100, -- intellect
+    [259456] = 100, -- strength
+    [259457] = 100, -- 150 stamina
 }
 
 local FFC_FLASK_TABLE = {
-	-- WARLORDS OF DRAENOR
-	[176151] = 100, -- 100 stamina, intellect, agility and strength (crystal)
-
-	[156077] = 200, -- 250 stamina
-	[156070] = 200, -- 200 intellect
-	[156073] = 200, -- 200 agility
-	[156071] = 200, -- 200 strength
-
-	[156084] = 250, -- 375 stamina
-	[156079] = 250, -- 250 intellect
-	[156064] = 250, -- 250 agility
-	[156080] = 250, -- 250 strength
-
 	-- LEGION
-	[188035] = 1300, -- 1950 stamina
-	[188031] = 1300, -- 1300 intellect
-	[188033] = 1300, -- 1300 agility
-	[188034] = 1300, -- 1300 strength
+	[188035] = 59, -- stamina
+	[188031] = 59, -- intellect
+	[188033] = 59, -- agility
+	[188034] = 59, -- strength
 
-	[188116] = 1300, -- flask from cauldron
+	[188116] = 59, -- flask from cauldron
+
+    -- BATTLE FOR AZEROTH
+	[251836] = 238, -- agility
+	[251837] = 238, -- intellect
+	[251838] = 238, -- 357 stamina
+	[251839] = 238, -- strength
 }
 
 local FFC_RUNE_TABLE = {
-	-- WARLORDS OF DRAENOR
-	[175457] = 50, -- 50 intellect
-	[175456] = 50, -- 50 agility
-	[175439] = 50, -- 50 strength
-
 	-- LEGION
-	[224001] = 325, -- 325 intellect, agility and strength (Defiled Augment Rune)
+	[224001] = 15, -- intellect, agility and strength
+
+    -- BATTLE FOR AZEROTH
+	[270058] = 60, -- intellect, agility and strength
 }
 
 local FFC_EATING_TABLE = {
