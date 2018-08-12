@@ -1,15 +1,11 @@
-## Interface: 70000
-## X-Min-Interface: 60000
+## Interface: 80000
 ## Title: FlaskFoodCheck
 ## Notes: Checks if all raid members have flask, food and rune buff.
-## Author: Elotheon
+## Version: 8.0.0
+## Author: Elotheon-Arthas-EU
 ## SavedVariables: FlaskFoodCheckDB
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Slash: /flaskfoodcheck, /ffc
-## X-Curse-Packaged-Version: 7.0.3
-## X-Curse-Project-Name: FlaskFoodCheck
-## X-Curse-Project-ID: flaskfoodcheck
-## X-Curse-Repository-ID: wow/flaskfoodcheck/mainline
 
 localization\enUS.lua
 localization\deDE.lua
